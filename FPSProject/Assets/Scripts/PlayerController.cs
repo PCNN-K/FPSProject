@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody playerRigid;
 
     private CapsuleCollider playerCollider;
+
     // Start is called before the first frame update
     void Start()
     {
