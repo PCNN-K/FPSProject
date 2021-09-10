@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Scene
   m_RootView: {fileID: 4}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 103
+  controlID: 126
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -199,7 +199,7 @@ MonoBehaviour:
   m_MinSize: {x: 201, y: 442}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 15
+  controlID: 16
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -446,23 +446,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 58e3feff
-      m_LastClickedID: -72872
-      m_ExpandedIDs: 8200ffff9200ffff9600ffff740fffff443fffff723fffff843fffff923fffff4459ffffee5cffff967bffffb47bffff4af7ffff62fbffff
+      m_SelectedIDs: 66abffff
+      m_LastClickedID: -21658
+      m_ExpandedIDs: 2cf7ffff92faffffcafafffff4faffff36fbffff4afbffff62fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Assault_Rifle_01_FPSController
-        m_OriginalName: Assault_Rifle_01_FPSController
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -65372
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 9}
       m_SearchString: 
@@ -548,7 +548,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Walls and floors v.1/Prefabs
     m_Globs: []
   m_ViewMode: 0
   m_StartGridSize: 49
@@ -561,7 +561,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 223c0000
     m_LastClickedID: 15394
-    m_ExpandedIDs: 00000000063c0000083c00000a3c00000c3c00000e3c0000
+    m_ExpandedIDs: 000000003e3c0000403c0000423c0000443c0000463c0000483c00004a3c00004c3c00004e3c0000503c0000523c0000543c0000563c0000583c00005a3c00005c3c00005e3c0000603c0000623c0000643c0000663c0000683c00006a3c00006c3c00006e3c0000703c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -589,23 +589,23 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: d23cffffffffffff00000000063c0000083c00000e3c0000624a0000664a0000864a0000884a00008a4a00008e4a0000a44a0000d64a0000da4a0000e24a0000ee4a0000084b00000a4b0000124b00002a4b00002e4b0000684f0000c2550000f6550000fe60000056610000428d0000528d0000
+    m_ExpandedIDs: 44d0ffffffffffff000000003e3c0000403c0000423c0000443c0000463c0000483c00004a3c00004c3c00004e3c0000503c0000523c0000543c0000563c0000583c00005a3c00005c3c00005e3c0000603c0000623c0000643c0000663c0000683c00006a3c00006c3c00006e3c0000703c0000983c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: PlayerController
-      m_OriginalName: PlayerController
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 12202
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 2}
+      m_ClientGUIView: {fileID: 10}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -770,9 +770,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.6255562, y: 0.54804575, z: -6.3377104}
+    m_Target: {x: 1.7195328, y: 0.5, z: 1.44}
     speed: 2
-    m_Value: {x: 2.6255562, y: 0.54804575, z: -6.3377104}
+    m_Value: {x: 1.7195328, y: 0.5, z: 1.44}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -819,13 +819,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.16894467, y: 0.33822975, z: -0.06186268, w: 0.9237145}
+    m_Target: {x: 0.15878002, y: -0.40289208, z: 0.07119361, w: 0.89856756}
     speed: 2
-    m_Value: {x: 0.16764933, y: 0.33693293, z: -0.061103318, w: 0.9244655}
+    m_Value: {x: 0.15899087, y: -0.4001895, z: 0.07071606, w: 0.8997608}
   m_Size:
-    m_Target: 2.909041
+    m_Target: 4.6400743
     speed: 2
-    m_Value: 2.909041
+    m_Value: 4.256949
   m_Ortho:
     m_Target: 1
     speed: 2

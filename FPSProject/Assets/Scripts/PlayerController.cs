@@ -29,6 +29,8 @@ public class PlayerController : MonoBehaviour
 
     private CapsuleCollider playerCollider;
 
+    private GameObject gunObject;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +39,7 @@ public class PlayerController : MonoBehaviour
         theCamera = FindObjectOfType<Camera>();
         // rigidBody 컴포넌트를 받아와 playerRigid에 할당한다.
         playerRigid = GetComponent<Rigidbody>();
+        gunObject = transform.GetChild(1).gameObject;
         applySpeed = walkSpeed;
         originPosY = theCamera.transform.localPosition.y;
         applySitPosY = originPosY;
@@ -89,19 +92,23 @@ public class PlayerController : MonoBehaviour
     IEnumerator SitCoroutine()
     {
         float _posY = theCamera.transform.localPosition.y;
+        float _gunPosY = gunObject.transform.localPosition.y;
         int count = 0;
 
         while(_posY != applySitPosY)
         {
             count++;
             _posY = Mathf.Lerp(_posY, applySitPosY, 0.3f);
+            _gunPosY = Mathf.Lerp(_gunPosY, applySitPosY - 0.5f, 0.3f);
             theCamera.transform.localPosition = new Vector3(0, _posY, 0);
+            gunObject.transform.localPosition = new Vector3(gunObject.transform.localPosition.x, _gunPosY, gunObject.transform.localPosition.z);
             if (count > 15)
                 break;
             yield return null;
         }
 
         theCamera.transform.localPosition = new Vector3(0, applySitPosY, 0);
+        gunObject.transform.localPosition = new Vector3(gunObject.transform.localPosition.x, applySitPosY - 0.5f, gunObject.transform.localPosition.z);
     }
 
     private void IsGround()
