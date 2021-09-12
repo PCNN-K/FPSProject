@@ -8,6 +8,7 @@ namespace DefaultNamespace
         [SerializeField] private Ammo _ammo;
         
         //ammo 의 오브젝트 풀
+        //힌트 : 총알 담든 자료구조는 Queue로 구현!
         public void Fire()
         {
             
