@@ -1,11 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class Player : MonoBehaviour
 {
     [SerializeField] private float hp;
+<<<<<<< HEAD:FPSProject/Assets/Scripts/PlayerController.cs
 
+=======
+    [SerializeField] private float ammo;
+    [SerializeField] public Gun gunObject;
+    
+    
+>>>>>>> c6b91612faff995566dbc1aeee2d7433bf6efc56:FPSProject/Assets/Scripts/Player.cs
     private float walkSpeed = 3f;
     private float runSpeed = 6.8f;
     private float sitSpeed = 1.5f;
@@ -31,8 +39,14 @@ public class PlayerController : MonoBehaviour
 
     private CapsuleCollider playerCollider;
 
+<<<<<<< HEAD:FPSProject/Assets/Scripts/PlayerController.cs
     [SerializeField]
     private GameObject gunObject;
+=======
+    
+    
+    
+>>>>>>> c6b91612faff995566dbc1aeee2d7433bf6efc56:FPSProject/Assets/Scripts/Player.cs
 
     // Start is called before the first frame update
     void Start()
@@ -46,8 +60,6 @@ public class PlayerController : MonoBehaviour
         originPosY = theCamera.transform.localPosition.y;
         applySitPosY = originPosY;
     }
-
-
 
     // Update is called once per frame
     void Update()
@@ -204,6 +216,7 @@ public class PlayerController : MonoBehaviour
         // 너무 갑자기 확확 돌아가지 않도록 임계치 설정
 
         theCamera.transform.localEulerAngles = new Vector3(currentCamRotationX, 0f, 0f);
+        
         // 마찬가지로 Euler 부분은 Study 필요.
     }
 }
