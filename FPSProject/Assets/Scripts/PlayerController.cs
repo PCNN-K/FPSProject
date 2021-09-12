@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private float hp;
+
     private float walkSpeed = 3f;
     private float runSpeed = 6.8f;
     private float sitSpeed = 1.5f;
@@ -29,6 +31,7 @@ public class PlayerController : MonoBehaviour
 
     private CapsuleCollider playerCollider;
 
+    [SerializeField]
     private GameObject gunObject;
 
     // Start is called before the first frame update
@@ -39,7 +42,6 @@ public class PlayerController : MonoBehaviour
         theCamera = FindObjectOfType<Camera>();
         // rigidBody 컴포넌트를 받아와 playerRigid에 할당한다.
         playerRigid = GetComponent<Rigidbody>();
-        gunObject = transform.GetChild(1).gameObject;
         applySpeed = walkSpeed;
         originPosY = theCamera.transform.localPosition.y;
         applySitPosY = originPosY;
