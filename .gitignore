@@ -9,6 +9,14 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
+/FPSProject/[Ll]ibrary/
+/FPSProject/[Tt]emp/
+/FPSProject/[Oo]bj/
+/FPSProject/[Bb]uild/
+/FPSProject/[Bb]uilds/
+/FPSProject/[Ll]ogs/
+/FPSProject/[Mm]emoryCaptures/
+
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
