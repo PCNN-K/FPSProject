@@ -4,30 +4,57 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    [SerializeField] private GameObject poolingAmmoPrefab;
+    private GameObject poolingAmmoPrefab;
     
 
     //ammo 의 오브젝트 풀
     //힌트 : 총알 담든 자료구조는 Queue로 구현!
 
     public static Queue<Ammo> AmmoPool = new Queue<Ammo>();
-
+    private Camera mainCamera;
     
 
     private void CreateAmmo()
     {
-        // 초기화 로직에서 Ammo를 담은 풀을 만들었으니 필요가 없다고 생각합니다.
+        
     }
 
     private void Awake()
     {
         //초기화 로직
+        
+    }
+
+    private void Start()
+    {
+        mainCamera = FindObjectOfType<Camera>();
+        poolingAmmoPrefab = Resources.Load<GameObject>("Prefabs/Ammo/556x45");
         Initialize(30);
     }
 
     public void Fire()
     {
         
+    }
+
+    private void Update()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            RaycastHit shootResult;
+            if (Physics.Raycast(mainCamera.ScreenPointToRay(Input.mousePosition), out shootResult))
+            {
+                var ammo = GetObject();
+                var direction = new Vector3(shootResult.point.x, shootResult.point.y, shootResult.point.z);
+                ammo.transform.position = direction.normalized;
+                ammo.Shoot(direction.normalized);
+            }
+        }
+    }
+
+    public void DestroyAmmo(Ammo _ammo)
+    {
+        ReturnObject(_ammo);
     }
 
     private void Initialize(int _initCount)

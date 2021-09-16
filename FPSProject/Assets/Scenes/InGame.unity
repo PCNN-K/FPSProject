@@ -167,67 +167,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunObject: {fileID: 567993245}
---- !u!1001 &556784969
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3272189248213096197, guid: 6b93d46067f10c9419b639df6bae6ebd, type: 3}
-      propertyPath: m_Name
-      value: 556x45
-      objectReference: {fileID: 0}
-    - target: {fileID: 3272189248213096197, guid: 6b93d46067f10c9419b639df6bae6ebd, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3278028617122223137, guid: 6b93d46067f10c9419b639df6bae6ebd, type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3278028617122223137, guid: 6b93d46067f10c9419b639df6bae6ebd, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.791
-      objectReference: {fileID: 0}
-    - target: {fileID: 3278028617122223137, guid: 6b93d46067f10c9419b639df6bae6ebd, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.85
-      objectReference: {fileID: 0}
-    - target: {fileID: 3278028617122223137, guid: 6b93d46067f10c9419b639df6bae6ebd, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 6.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3278028617122223137, guid: 6b93d46067f10c9419b639df6bae6ebd, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3278028617122223137, guid: 6b93d46067f10c9419b639df6bae6ebd, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3278028617122223137, guid: 6b93d46067f10c9419b639df6bae6ebd, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3278028617122223137, guid: 6b93d46067f10c9419b639df6bae6ebd, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3278028617122223137, guid: 6b93d46067f10c9419b639df6bae6ebd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3278028617122223137, guid: 6b93d46067f10c9419b639df6bae6ebd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3278028617122223137, guid: 6b93d46067f10c9419b639df6bae6ebd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6b93d46067f10c9419b639df6bae6ebd, type: 3}
 --- !u!1 &567993245 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7510617659861968560, guid: 51e1124f3e2a9744eb093f790896a4e6, type: 3}
@@ -245,21 +184,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581444c44031459ab813e6019cc15a76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ammo: {fileID: 0}
-  countAmmo: 30
-  countMagazine: 30
-  maxAmmoCount: 300
-  carryAmmoCount: 120
-  gunName: AK-47
-  accuracy: 0
-  range: 0
-  fireRate: 0.2
-  reloadTime: 3
-  actionForce: 0
-  ActionFineSightForce: 0
-  FineSightOrigin: {x: 0, y: 0, z: 0}
-  muzzleFlash: {fileID: 0}
-  fireSound: {fileID: 0}
 --- !u!1 &678416106
 GameObject:
   m_ObjectHideFlags: 0
