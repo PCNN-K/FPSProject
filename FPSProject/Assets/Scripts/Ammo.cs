@@ -1,16 +1,16 @@
-using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-namespace DefaultNamespace
-{
-    public class Ammo : MonoBehaviour
-    {
-        public float speed;
-        public float damage;
 
-        private void OnCollisionEnter(Collision other)
-        {
+
+public class Ammo : MonoBehaviour
+{
+    public float speed;
+    public float damage;
+
+    private void OnCollisionEnter(Collision other)
+    {
             
-        }
     }
 }

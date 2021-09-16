@@ -1,9 +1,9 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-namespace DefaultNamespace
+
+public class Enemy : MonoBehaviour
 {
-    public class Enemy : MonoBehaviour
-    {
-        public float hp;
-    }
+    public float hp;
 }

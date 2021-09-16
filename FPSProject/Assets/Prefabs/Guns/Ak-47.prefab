@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &227053217829363446
+--- !u!1 &7510617659861968560
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,45 +8,32 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6481605042319880985}
-  - component: {fileID: 7360400535010239350}
+  - component: {fileID: 7510617659862334096}
   m_Layer: 0
-  m_Name: AK47
+  m_Name: Ak-47
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6481605042319880985
+--- !u!4 &7510617659862334096
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 227053217829363446}
+  m_GameObject: {fileID: 7510617659861968560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.3, y: 0.5, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 9145074198786914339}
-  - {fileID: 9145074198786914341}
-  - {fileID: 9145074198786914343}
+  - {fileID: 7510617659862334098}
+  - {fileID: 7510617659862334100}
+  - {fileID: 7510617659862334102}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7360400535010239350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 227053217829363446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 581444c44031459ab813e6019cc15a76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &9145074198787335171
+--- !u!1 &7510617659861968562
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54,9 +41,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9145074198786914339}
-  - component: {fileID: 9145074198790338561}
-  - component: {fileID: 9145074198789339841}
+  - component: {fileID: 7510617659862334098}
+  - component: {fileID: 7510617659863136944}
+  - component: {fileID: 7510617659864234096}
   m_Layer: 0
   m_Name: Ak47Body
   m_TagString: Untagged
@@ -64,35 +51,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &9145074198786914339
+--- !u!4 &7510617659862334098
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9145074198787335171}
+  m_GameObject: {fileID: 7510617659861968562}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -3.6062002e-12, y: 0.18688011, z: -0.3192893}
   m_LocalScale: {x: 0.10884624, y: 0.025196157, z: 0.025196157}
   m_Children: []
-  m_Father: {fileID: 6481605042319880985}
+  m_Father: {fileID: 7510617659862334096}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &9145074198790338561
+--- !u!33 &7510617659863136944
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9145074198787335171}
+  m_GameObject: {fileID: 7510617659861968562}
   m_Mesh: {fileID: 4300002, guid: cd8d56469cf64654eaa21e15c6ae7c18, type: 3}
---- !u!23 &9145074198789339841
+--- !u!23 &7510617659864234096
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9145074198787335171}
+  m_GameObject: {fileID: 7510617659861968562}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -127,7 +114,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &9145074198787335173
+--- !u!1 &7510617659861968564
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,9 +122,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9145074198786914341}
-  - component: {fileID: 9145074198790338563}
-  - component: {fileID: 9145074198789339843}
+  - component: {fileID: 7510617659862334100}
+  - component: {fileID: 7510617659863136946}
+  - component: {fileID: 7510617659864234098}
   m_Layer: 0
   m_Name: Ak47Mag
   m_TagString: Untagged
@@ -145,35 +132,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &9145074198786914341
+--- !u!4 &7510617659862334100
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9145074198787335173}
+  m_GameObject: {fileID: 7510617659861968564}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -0, y: 0.048051782, z: -0.054310318}
   m_LocalScale: {x: 0.17768803, y: 0.26406172, z: 0.26406172}
   m_Children: []
-  m_Father: {fileID: 6481605042319880985}
+  m_Father: {fileID: 7510617659862334096}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &9145074198790338563
+--- !u!33 &7510617659863136946
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9145074198787335173}
+  m_GameObject: {fileID: 7510617659861968564}
   m_Mesh: {fileID: 4300000, guid: cd8d56469cf64654eaa21e15c6ae7c18, type: 3}
---- !u!23 &9145074198789339843
+--- !u!23 &7510617659864234098
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9145074198787335173}
+  m_GameObject: {fileID: 7510617659861968564}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -208,7 +195,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &9145074198787335175
+--- !u!1 &7510617659861968566
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -216,9 +203,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9145074198786914343}
-  - component: {fileID: 9145074198790338565}
-  - component: {fileID: 9145074198789339845}
+  - component: {fileID: 7510617659862334102}
+  - component: {fileID: 7510617659863136948}
+  - component: {fileID: 7510617659864234100}
   m_Layer: 0
   m_Name: Cube_001
   m_TagString: Untagged
@@ -226,35 +213,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &9145074198786914343
+--- !u!4 &7510617659862334102
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9145074198787335175}
+  m_GameObject: {fileID: 7510617659861968566}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0.02595988, y: 0.14489095, z: -0.02207451}
   m_LocalScale: {x: 0.22649787, y: 0.13486443, z: 0.13486443}
   m_Children: []
-  m_Father: {fileID: 6481605042319880985}
+  m_Father: {fileID: 7510617659862334096}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &9145074198790338565
+--- !u!33 &7510617659863136948
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9145074198787335175}
+  m_GameObject: {fileID: 7510617659861968566}
   m_Mesh: {fileID: 4300004, guid: cd8d56469cf64654eaa21e15c6ae7c18, type: 3}
---- !u!23 &9145074198789339845
+--- !u!23 &7510617659864234100
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9145074198787335175}
+  m_GameObject: {fileID: 7510617659861968566}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
