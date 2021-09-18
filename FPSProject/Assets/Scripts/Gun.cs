@@ -39,17 +39,7 @@ public class Gun : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButton(0))
-        {
-            RaycastHit shootResult;
-            if (Physics.Raycast(mainCamera.ScreenPointToRay(Input.mousePosition), out shootResult))
-            {
-                var ammo = GetObject();
-                var direction = new Vector3(shootResult.point.x, shootResult.point.y, shootResult.point.z);
-                ammo.transform.position = direction.normalized;
-                ammo.Shoot(direction.normalized);
-            }
-        }
+        
     }
 
     public void DestroyAmmo(Ammo _ammo)
