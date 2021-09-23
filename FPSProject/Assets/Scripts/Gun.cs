@@ -6,10 +6,6 @@ public class Gun : MonoBehaviour
 {
     [SerializeField]
     private GameObject poolingAmmoPrefab;
-    
-
-    //ammo 의 오브젝트 풀
-    //힌트 : 총알 담든 자료구조는 Queue로 구현!
 
     public static Queue<Ammo> AmmoPool = new Queue<Ammo>();
     private Camera mainCamera;
@@ -38,13 +34,15 @@ public class Gun : MonoBehaviour
             RaycastHit hitResult;
             if(Physics.Raycast(mainCamera.ScreenPointToRay(Input.mousePosition), out hitResult))
             {
-                var direction = new Vector3(hitResult.point.x, transform.position.y, hitResult.point.z) - transform.position;
+                var direction = new Vector3(hitResult.point.x, hitResult.point.y, hitResult.point.z) - transform.position;
                 var ammo = GetObject();
                 ammo.transform.position = transform.position + direction.normalized;
                 ammo.Shoot(direction.normalized);
             }
         }
     }
+
+    
 
     private void Update()
     {

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4363198821438193990}
   - component: {fileID: 4332161217808150326}
   - component: {fileID: 207985651851998635}
+  - component: {fileID: 2114122310108065999}
   m_Layer: 0
   m_Name: 556x45
   m_TagString: Untagged
@@ -113,3 +114,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   damage: 0
+  gun: {fileID: 0}
+--- !u!65 &2114122310108065999
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4385335097563099462}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.086103186, y: 0.086103186, z: 0.40217483}
+  m_Center: {x: 0, y: 0, z: -0.00451345}

@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581444c44031459ab813e6019cc15a76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poolingAmmoPrefab: {fileID: 0}
+  poolingAmmoPrefab: {fileID: 4385335097563099462, guid: fb5e4ca3435c5d24a9d1f404bd08fd61, type: 3}
 --- !u!1 &591544413220928226
 GameObject:
   m_ObjectHideFlags: 0

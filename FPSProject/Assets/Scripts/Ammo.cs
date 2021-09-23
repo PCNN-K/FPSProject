@@ -15,8 +15,8 @@ public class Ammo : MonoBehaviour
 
     private void Start()
     {
-        // gun = GameObject.Find("MainPlayer").transform.Find("AK-47").gameObject.GetComponent<Gun>();
-        gun = FindObjectOfType<Gun>();
+        gun = GameObject.Find("MainPlayer").transform.Find("Ak-47").gameObject.GetComponent<Gun>();
+        // gun = FindObjectOfType<Gun>();
     }
 
     public void Shoot(Vector3 _direction)
