@@ -1,22 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 
 
 public class Ammo : MonoBehaviour
 {
     public float speed;
-    public float damage;
+    public static float damage;
+    private float timer;
+    private float waitingTime;
     private Vector3 direction;
 
-    [SerializeField]
-    private Gun gun;
+    public Action OnDestroyCallback;
 
     private void Start()
     {
-        gun = GameObject.Find("MainPlayer").transform.Find("Ak-47").gameObject.GetComponent<Gun>();
-        // gun = FindObjectOfType<Gun>();
+        timer = 0.0f;
+        waitingTime = 3.0f;
+        damage = 10.0f;
     }
 
     public void Shoot(Vector3 _direction)
@@ -30,21 +33,25 @@ public class Ammo : MonoBehaviour
 
     private void Update()
     {
+        timer += Time.deltaTime;
+        if(timer > waitingTime)
+        {
+            OnDestroyCallback.Invoke();
+            timer = 0;
+        }
         transform.Translate(direction);
-        Invoke("DestroyAmmo", 5f);
     }
 
-    public void DestroyAmmo()
-    {
-        gun.ReturnObject(this);
-    }
 
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Enemy")
         {
-            Destroy(other.gameObject);
-            DestroyAmmo();
-        }   
+            OnDestroyCallback.Invoke();
+        }
+        else
+        {
+            OnDestroyCallback.Invoke();
+        }
     }
 }

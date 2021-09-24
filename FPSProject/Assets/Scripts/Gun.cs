@@ -9,12 +9,6 @@ public class Gun : MonoBehaviour
 
     public static Queue<Ammo> AmmoPool = new Queue<Ammo>();
     private Camera mainCamera;
-    
-
-    private void CreateAmmo()
-    {
-        
-    }
 
     private void Awake()
     {
@@ -42,8 +36,6 @@ public class Gun : MonoBehaviour
         }
     }
 
-    
-
     private void Update()
     {
         Fire();
@@ -64,6 +56,7 @@ public class Gun : MonoBehaviour
         var newAmmoObj = Instantiate(poolingAmmoPrefab).GetComponent<Ammo>();
         newAmmoObj.gameObject.SetActive(false);
         newAmmoObj.transform.SetParent(transform);
+        newAmmoObj.OnDestroyCallback = () => ReturnObject(newAmmoObj);
         return newAmmoObj;
     }
 
