@@ -27,7 +27,7 @@ public partial class PlayerManager : MonoBehaviour
     private float currentCamRotationX = 0f;
 
 
-    private Camera theCamera;
+    public Camera theCamera;
     private Rigidbody playerRigid;
 
     private GameObject MainPlayer;
@@ -55,6 +55,10 @@ public partial class PlayerManager : MonoBehaviour
         _Guns.Add((Resources.Load<GameObject>("Prefabs/Guns/M4A1 Sopmod")).GetComponent<Gun>());
         _Guns.Add((Resources.Load<GameObject>("Prefabs/Guns/Skorpion VZ")).GetComponent<Gun>());
         _Guns.Add((Resources.Load<GameObject>("Prefabs/Guns/UMP-45")).GetComponent<Gun>());
+        if(_Guns.Count == 0)
+        {
+            Debug.LogError("No Available Guns");
+        }
     }
 
     // Update is called once per frame

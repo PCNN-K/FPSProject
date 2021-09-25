@@ -21,24 +21,15 @@ public class Gun : MonoBehaviour
         mainCamera = FindObjectOfType<Camera>();
     }
 
-    public void Fire()
+    public void Fire(Vector3 _target)
     {
-        if (Input.GetMouseButton(0))
-        {
-            RaycastHit hitResult;
-            if(Physics.Raycast(mainCamera.ScreenPointToRay(Input.mousePosition), out hitResult))
-            {
-                var direction = new Vector3(hitResult.point.x, hitResult.point.y, hitResult.point.z) - transform.position;
-                var ammo = GetObject();
-                ammo.transform.position = transform.position + direction.normalized;
-                ammo.Shoot(direction.normalized);
-            }
-        }
+        var ammo = GetObject();
+        ammo.transform.position = transform.position + _target.normalized;
+        ammo.Shoot(_target.normalized);
     }
 
     private void Update()
     {
-        Fire();
     }
 
     // 오브젝트 풀에 새로운 오브젝트를 일정 개수만큼 생성해서 Enqueue
