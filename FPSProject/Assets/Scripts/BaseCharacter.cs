@@ -5,6 +5,7 @@ using UnityEngine;
 public class BaseCharacter : MonoBehaviour
 {
     [SerializeField] protected float hp;
+    [SerializeField] protected float maxHp;
 
     protected Gun myGun;
     protected Vector3 direction;
@@ -21,7 +22,7 @@ public class BaseCharacter : MonoBehaviour
     {
         if(_other.gameObject.tag == "Bullet")
         {
-            hp -= _other.gameObject.GetComponent<Ammo>().damage;
+            hp -= _other.gameObject.GetComponent<Ammo>().GetDamage;
         }
     }
 

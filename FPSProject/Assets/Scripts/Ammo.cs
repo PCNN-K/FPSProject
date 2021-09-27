@@ -22,6 +22,14 @@ public class Ammo : MonoBehaviour
         damage = 10.0f;
     }
 
+    public float GetDamage
+    {
+        get
+        {
+            return damage;
+        }
+    }
+
     public void Shoot(Vector3 _direction)
     {
         _direction.x *= speed;

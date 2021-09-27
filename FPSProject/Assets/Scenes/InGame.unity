@@ -167,13 +167,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedIndex: 0
-  gunObject: {fileID: 0}
   _Guns:
   - {fileID: -1506426456662102430, guid: d8c82e4f0cd91d648bd4b18dcdf7308c, type: 3}
   - {fileID: 7234387567002886612, guid: d4457522a4249df43bea198707121a46, type: 3}
   - {fileID: 4656477454294898769, guid: e9485435a88f0b642a8fd379b66929d2, type: 3}
   - {fileID: 8680195139639214152, guid: 3e50684273102c14688f5c0857977171, type: 3}
-  theCamera: {fileID: 0}
+  isRun: 0
+  isGround: 1
+  isSit: 0
+--- !u!114 &634922157 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2947856037986924987, guid: 80fc8bcefd51c5546a2cc79f3e6f02cf, type: 3}
+  m_PrefabInstance: {fileID: 2947856038885782501}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65c6c9a33608d1240b2766a498658f83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &678416106
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,8 +250,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 1.2722}
-  m_SizeDelta: {x: 1000, y: 97.4557}
+  m_AnchoredPosition: {x: -98.247284, y: 1.2722}
+  m_SizeDelta: {x: 885.5054, y: 97.4557}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &689333664
 MonoBehaviour:
@@ -304,6 +316,7 @@ GameObject:
   - component: {fileID: 689671786}
   - component: {fileID: 689671785}
   - component: {fileID: 689671784}
+  - component: {fileID: 689671788}
   m_Layer: 5
   m_Name: UIManager
   m_TagString: Untagged
@@ -393,6 +406,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &689671788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689671783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ddd87b15f83ed4b96364d205c52b26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hpDisplayer: {fileID: 1630308597}
+  player: {fileID: 634922157}
+  hpSlider: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,8 +614,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -63.340633, y: -244.36081}
-  m_SizeDelta: {x: -52.6812, y: 23.6734}
+  m_AnchoredPosition: {x: 0.6702881, y: -244.36081}
+  m_SizeDelta: {x: -1.3406, y: 23.6734}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1307836595
 MonoBehaviour:
@@ -773,7 +801,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HP 100 / 100
+  m_Text: 
 --- !u!222 &1630308598
 CanvasRenderer:
   m_ObjectHideFlags: 0

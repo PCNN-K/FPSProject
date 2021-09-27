@@ -59,7 +59,7 @@ public class Enemy : BaseCharacter
         {
             yield return new WaitForSeconds(0.2f);
 
-            float dist = Vector3.Distance(playerTransform.position, _transform.position);
+            float dist = Vector3.Distance(_transform.position, playerTransform.position);
 
             if(dist <= attackDist)
             {
