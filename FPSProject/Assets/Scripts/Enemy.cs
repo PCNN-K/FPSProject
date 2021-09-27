@@ -6,6 +6,8 @@ using UnityEngine;
 public class Enemy : BaseCharacter
 {
     private GameObject explosion = null;
+    private GameObject gunObject = null;
+    private GameObject instance = null;
 
     private enum Status
     {
@@ -20,22 +22,26 @@ public class Enemy : BaseCharacter
     private Transform playerTransform;
     private Transform _transform;
 
+    Coroutine statusCoroutine = null;
+
     private void Start()
     {
         hp = 100.0f;
         explosion = Resources.Load<GameObject>("Prefabs/Explosion/Explosions");
-        myGun = Resources.Load<GameObject>("Prefabs/Guns/EnemyTurretGun").GetComponent<Gun>();
-        if(myGun == null)
-        {
-            Debug.LogError("No Available Gun");
-        }
-        myGun.gameObject.SetActive(false);
-        myGun.transform.SetParent(null);
+        gunObject = Resources.Load<GameObject>("Prefabs/Guns/EnemyTurretGun");
+        instance = Instantiate(gunObject, transform);
+        myGun = instance.GetComponent<Gun>();
+        //if(myGun == null)
+        //{
+        //   Debug.LogError("No Available Gun");
+        //}
+        instance.gameObject.SetActive(true);
+        instance.transform.SetParent(transform);
 
         _transform = this.gameObject.GetComponent<Transform>();
         playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
 
-
+        statusCoroutine = StartCoroutine("CheckState");
     }
 
     private void Update()
@@ -43,7 +49,7 @@ public class Enemy : BaseCharacter
         IsDead();
         if(currentStatus == Status.attack)
         {
-            Shoot(playerTransform.position);
+            Shoot(playerTransform.position.normalized);
         }
     }
 

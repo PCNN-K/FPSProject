@@ -8,7 +8,7 @@ using System;
 public class Ammo : MonoBehaviour
 {
     public float speed;
-    public static float damage;
+    public float damage;
     private float timer;
     private float waitingTime;
     private Vector3 direction;
@@ -26,7 +26,7 @@ public class Ammo : MonoBehaviour
     {
         _direction.x *= speed;
         _direction.y *= speed;
-        _direction.z *= -speed;
+        _direction.z *= speed;
         this.direction = _direction;
 
     }

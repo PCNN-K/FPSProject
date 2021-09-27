@@ -21,11 +21,8 @@ public class Player : BaseCharacter
         // 마우스 좌클릭이 입력되면 해당 좌표를 받아서 방아쇠를 당긴다.
         if (Input.GetMouseButton(0))
         {
-            if (Physics.Raycast(_manager.theCamera.ScreenPointToRay(Input.mousePosition), out hitResult))
-            {
-                target = new Vector3(hitResult.point.x, hitResult.point.y, hitResult.point.z);
-                Shoot(target);
-            }
+            Shoot(_manager.theCamera.transform.forward);
+            
         }
     }
 

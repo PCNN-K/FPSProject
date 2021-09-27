@@ -50,15 +50,12 @@ public partial class PlayerManager : MonoBehaviour
         originPosY = theCamera.transform.localPosition.y;
         applySitPosY = originPosY;
 
-        // 리스트 초기화 작업 구현 필요
-        _Guns.Add((Resources.Load<GameObject>("Prefabs/Guns/Ak-47")).GetComponent<Gun>());
-        _Guns.Add((Resources.Load<GameObject>("Prefabs/Guns/M4A1 Sopmod")).GetComponent<Gun>());
-        _Guns.Add((Resources.Load<GameObject>("Prefabs/Guns/Skorpion VZ")).GetComponent<Gun>());
-        _Guns.Add((Resources.Load<GameObject>("Prefabs/Guns/UMP-45")).GetComponent<Gun>());
-        if(_Guns.Count == 0)
-        {
-            Debug.LogError("No Available Guns");
-        }
+        // 리스트 초기화 작업
+        //_Guns.Add((Resources.Load<GameObject>("Prefabs/Guns/Ak-47")).GetComponent<Gun>());
+        //_Guns.Add((Resources.Load<GameObject>("Prefabs/Guns/M4A1 Sopmod")).GetComponent<Gun>());
+        //_Guns.Add((Resources.Load<GameObject>("Prefabs/Guns/Skorpion VZ")).GetComponent<Gun>());
+        //_Guns.Add((Resources.Load<GameObject>("Prefabs/Guns/UMP-45")).GetComponent<Gun>());
+        
     }
 
     // Update is called once per frame
