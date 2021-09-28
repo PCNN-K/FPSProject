@@ -10,8 +10,17 @@ public class Gun : MonoBehaviour
     public static Queue<Ammo> AmmoPool = new Queue<Ammo>();
     private Camera mainCamera;
 
+    private int currentAmmo;
+    private int maxAmmo;
+    private int magazineAmmo;
+    private int currentMagazineAmmo;
+
     private void Awake()
     {
+        magazineAmmo = 30;
+        currentAmmo = magazineAmmo;
+        currentMagazineAmmo = magazineAmmo;
+        maxAmmo = 200;
         //초기화 로직
         Initialize(30);
     }
@@ -19,6 +28,22 @@ public class Gun : MonoBehaviour
     private void Start()
     {
         mainCamera = FindObjectOfType<Camera>();
+    }
+
+    public int GetCurrentMagazineAmmo
+    {
+        get
+        {
+            return currentMagazineAmmo;
+        }
+    }
+
+    public int GetMagazineAmmo
+    {
+        get
+        {
+            return magazineAmmo;
+        }
     }
 
     public void Fire(Vector3 _target)
