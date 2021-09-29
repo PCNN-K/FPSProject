@@ -49,8 +49,8 @@ public class Gun : MonoBehaviour
     public void Fire(Vector3 _target)
     {
         var ammo = GetObject();
-        ammo.transform.position = transform.position + _target;
-        ammo.Shoot(_target.normalized);
+        ammo.transform.position = transform.position;
+        ammo.Shoot(_target);
     }
 
     private void Update()

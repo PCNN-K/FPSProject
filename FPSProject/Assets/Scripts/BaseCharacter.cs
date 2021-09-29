@@ -29,7 +29,6 @@ public class BaseCharacter : MonoBehaviour
     // 향하는 방향으로 총을 격발한다.
     protected virtual void Shoot(Vector3 _target)
     {
-        direction = _target - myGun.gameObject.transform.position.normalized;
-        myGun.Fire(direction);
+        myGun.Fire(_target);
     }
 }
