@@ -54,6 +54,14 @@ public partial class PlayerManager : MonoBehaviour
         TryCharRotation();
     }
 
+    public GameObject GetPlayer
+    {
+        get
+        {
+            return MainPlayer;
+        }
+    }
+
     private void TrySit()
     {
         if (Input.GetKeyDown(KeyCode.LeftControl))

@@ -128,6 +128,14 @@ public class Player : BaseCharacter
         myGun.gameObject.transform.localEulerAngles = new Vector3(_CamRotX, 0f, 0f);
     }
 
+    public Gun GetCurrentGun
+    {
+        get
+        {
+            return myGun;
+        }
+    }
+
     public float GetHP
     {
         get {

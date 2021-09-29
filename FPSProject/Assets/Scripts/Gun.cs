@@ -49,7 +49,8 @@ public class Gun : MonoBehaviour
     public void Fire(Vector3 _target)
     {
         var ammo = GetObject();
-        ammo.transform.position = transform.position;
+        ammo.transform.position = transform.Find("BulletPos").position;
+        ammo.transform.rotation = transform.Find("BulletPos").rotation;
         ammo.Shoot(_target);
     }
 

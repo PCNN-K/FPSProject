@@ -49,7 +49,7 @@ public class Enemy : BaseCharacter
         IsDead();
         if(currentStatus == Status.attack)
         {
-            Shoot(playerTransform.position.normalized);
+            Shoot((_transform.position - playerTransform.position).normalized);
         }
     }
 

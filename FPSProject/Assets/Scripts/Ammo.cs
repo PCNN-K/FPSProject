@@ -34,9 +34,8 @@ public class Ammo : MonoBehaviour
     {
         _direction.x *= speed;
         _direction.y *= speed;
-        _direction.z *= -speed;
+        _direction.z *= speed;
         this.direction = _direction;
-
     }
 
     private void Update()

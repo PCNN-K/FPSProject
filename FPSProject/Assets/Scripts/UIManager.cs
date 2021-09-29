@@ -7,7 +7,6 @@ public class UIManager : MonoBehaviour
 {
     public Text hpDisplayer;
     public Text ammoDisplayer;
-    [SerializeField]
     private Player player;
     [SerializeField]
     private PlayerManager manager;
@@ -24,15 +23,15 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        
-        gun = player.gameObject.transform.Find("Ak-47(clone)").gameObject.GetComponent<Gun>();
+        player = manager.GetPlayer.GetComponent<Player>();
+        gun = player.GetCurrentGun;
     }
 
     // Update is called once per frame
     void Update()
     {
         hpDisplayer.text = "HP : " + player.GetHP;
-        //ammoDisplayer.text = "Ammo : " + gun.GetCurrentMagazineAmmo + " / " + gun.GetMagazineAmmo;
+        ammoDisplayer.text = "Ammo : " + gun.GetCurrentMagazineAmmo + " / " + gun.GetMagazineAmmo;
         UpdateImage();
         UpdateSlider();
 
@@ -41,7 +40,7 @@ public class UIManager : MonoBehaviour
     private void UpdateSlider()
     {
         hpSlider.value = Mathf.Lerp(hpSlider.value, player.GetHP / player.GetMaxHP, Time.deltaTime * 10);
-       // ammoSlider.value = Mathf.Lerp(ammoSlider.value, gun.GetCurrentMagazineAmmo / gun.GetMagazineAmmo, Time.deltaTime * 10);
+        ammoSlider.value = Mathf.Lerp(ammoSlider.value, gun.GetCurrentMagazineAmmo / gun.GetMagazineAmmo, Time.deltaTime * 10);
     }
 
     private void UpdateImage()
