@@ -6,6 +6,8 @@ public class Gun : MonoBehaviour
 {
     [SerializeField]
     private GameObject poolingAmmoPrefab;
+    private ParticleSystem Flash;
+    private ParticleSystem FlashParticle;
 
     public static Queue<Ammo> AmmoPool = new Queue<Ammo>();
     private Camera mainCamera;
@@ -28,6 +30,8 @@ public class Gun : MonoBehaviour
     private void Start()
     {
         mainCamera = FindObjectOfType<Camera>();
+        Flash = Resources.Load<ParticleSystem>("Prefabs/Particles/Flash");
+        FlashParticle = Instantiate(Flash, transform.Find("BulletPos").position, transform.Find("BulletPos").rotation);
     }
 
     public int GetCurrentMagazineAmmo
@@ -51,6 +55,8 @@ public class Gun : MonoBehaviour
         var ammo = GetObject();
         ammo.transform.position = transform.Find("BulletPos").position;
         ammo.transform.rotation = transform.Find("BulletPos").rotation;
+
+        FlashParticle.Play();
         ammo.Shoot(_target);
     }
 

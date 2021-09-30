@@ -42,6 +42,7 @@ public class Player : BaseCharacter
         {
             Shoot(theCamera.transform.forward);
         }
+        // IsDead();
     }
 
     public void Sit()

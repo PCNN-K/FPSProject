@@ -24,6 +24,10 @@ public class BaseCharacter : MonoBehaviour
         {
             hp -= _other.gameObject.GetComponent<Ammo>().GetDamage;
         }
+        else
+        {
+            return;
+        }
     }
 
     // 향하는 방향으로 총을 격발한다.

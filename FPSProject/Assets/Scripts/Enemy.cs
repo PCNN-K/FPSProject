@@ -17,7 +17,7 @@ public class Enemy : BaseCharacter
 
     private Status currentStatus = Status.idle;
 
-    private float attackDist = 15.0f;
+    private float attackDist = 10.0f;
 
     private Transform playerTransform;
     private Transform _transform;
@@ -31,15 +31,13 @@ public class Enemy : BaseCharacter
         gunObject = Resources.Load<GameObject>("Prefabs/Guns/EnemyTurretGun");
         instance = Instantiate(gunObject, transform);
         myGun = instance.GetComponent<Gun>();
-        //if(myGun == null)
-        //{
-        //   Debug.LogError("No Available Gun");
-        //}
+        
         instance.gameObject.SetActive(true);
         instance.transform.SetParent(transform);
 
         _transform = this.gameObject.GetComponent<Transform>();
         playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
+        
 
         statusCoroutine = StartCoroutine("CheckState");
     }
@@ -80,4 +78,6 @@ public class Enemy : BaseCharacter
             Destroy(gameObject);
         }
     }
+
+    
 }

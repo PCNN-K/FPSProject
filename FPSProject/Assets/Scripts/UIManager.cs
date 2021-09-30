@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIManager : MonoBehaviour
+public partial class UIManager : MonoBehaviour
 {
     public Text hpDisplayer;
     public Text ammoDisplayer;
@@ -12,7 +12,6 @@ public class UIManager : MonoBehaviour
     private PlayerManager manager;
     private Gun gun;
 
-    public Image image;
     public RawImage statusImage;
     public Texture walkStatus;
     public Texture crouchStatus;
@@ -25,6 +24,7 @@ public class UIManager : MonoBehaviour
     {
         player = manager.GetPlayer.GetComponent<Player>();
         gun = player.GetCurrentGun;
+        panelImage = panelObject.GetComponent<Image>();
     }
 
     // Update is called once per frame
