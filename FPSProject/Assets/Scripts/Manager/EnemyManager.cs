@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Manager
 {
@@ -16,6 +17,19 @@ namespace Manager
         public void Killed(Enemy killed)
         {
             _enemies.Remove(killed);
+            CheckWin();
+        }
+
+        private void CheckWin()
+        {
+            var isWin = true;
+            //조건 체크
+
+            if (isWin)
+            {
+                GameManager.Instance.stageNum++;
+                SceneManager.LoadScene("InGame");
+            }
         }
     }
 }
