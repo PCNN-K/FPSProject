@@ -561,10 +561,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72ddd87b15f83ed4b96364d205c52b26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panelObject: {fileID: 30383515}
   hpDisplayer: {fileID: 1630308597}
   ammoDisplayer: {fileID: 1041648420}
   manager: {fileID: 522111696}
-  image: {fileID: 1940978683}
   statusImage: {fileID: 778783458}
   walkStatus: {fileID: 0}
   crouchStatus: {fileID: 0}
@@ -1477,7 +1477,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4643639063099669907, guid: cc3f735fc3fd07c429d8944d3d7bc716, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.187
+      value: 13.378
       objectReference: {fileID: 0}
     - target: {fileID: 4643639063099669907, guid: cc3f735fc3fd07c429d8944d3d7bc716, type: 3}
       propertyPath: m_LocalRotation.w
