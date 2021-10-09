@@ -19,17 +19,16 @@ public partial class PlayerManager : MonoBehaviour
 
     private GameObject MainPlayer;
     private Player player;
+    private GameObject SpawnPoint;
 
     private CapsuleCollider playerCollider;
-
-
-
 
 
     // Start is called before the first frame update
     void Start()
     {
-        MainPlayer = GameObject.Find("MainPlayer");
+        SpawnPoint = Manager.MapManager.Instance._maps[Manager.GameManager.Instance.stageNum - 1].transform.Find("SpawnPoint").gameObject;
+        MainPlayer = Instantiate(Resources.Load<GameObject>("Prefabs/Player/MainPlayer"), SpawnPoint.transform);
         player = MainPlayer.GetComponent<Player>();
         playerCollider = MainPlayer.GetComponent<CapsuleCollider>();
         playerRigid = MainPlayer.GetComponent<Rigidbody>();

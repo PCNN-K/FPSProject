@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public partial class UIManager : MonoBehaviour
 {
-    public Text hpDisplayer;
-    public Text ammoDisplayer;
     private Player player;
     [SerializeField]
     private PlayerManager manager;
@@ -30,8 +28,6 @@ public partial class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        hpDisplayer.text = "HP : " + player.GetHP;
-        ammoDisplayer.text = "Ammo : " + gun.GetCurrentMagazineAmmo + " / " + gun.GetMagazineAmmo;
         UpdateImage();
         UpdateSlider();
 

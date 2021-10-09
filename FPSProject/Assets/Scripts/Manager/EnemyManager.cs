@@ -22,13 +22,12 @@ namespace Manager
 
         private void CheckWin()
         {
-            var isWin = true;
-            //조건 체크
+            if (_enemies.Count == 0)
+                GameManager.Instance.isWin = true;
 
-            if (isWin)
+            if (GameManager.Instance.isWin)
             {
-                GameManager.Instance.stageNum++;
-                SceneManager.LoadScene("InGame");
+                GameManager.Instance.WinningCeremony();
             }
         }
     }

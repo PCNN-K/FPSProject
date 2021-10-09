@@ -96,7 +96,6 @@ GameObject:
   - component: {fileID: 3910293836328623350}
   - component: {fileID: 3910293836328623351}
   - component: {fileID: 3910293836328623304}
-  - component: {fileID: 3910293836328623305}
   m_Layer: 0
   m_Name: MainPlayer
   m_TagString: Player
@@ -196,21 +195,5 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &3910293836328623305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3910293836328623306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65c6c9a33608d1240b2766a498658f83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 0
-  maxHp: 0
-  _manager: {fileID: 0}
-  theCamera: {fileID: 0}
