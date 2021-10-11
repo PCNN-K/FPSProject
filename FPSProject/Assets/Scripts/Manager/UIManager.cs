@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public partial class UIManager : MonoBehaviour
 {
+    public Text WinningText;
     private Player player;
     [SerializeField]
     private PlayerManager manager;
@@ -55,6 +56,19 @@ public partial class UIManager : MonoBehaviour
         {
             walkStatus = Resources.Load<Texture>("Images/UI/Stance_Stand_Icon");
             statusImage.texture = walkStatus;
+        }
+    }
+
+    public void FadeInText()
+    {
+        while(WinningText.color.a < 1.0f)
+        {
+            WinningText.color = new Color(WinningText.color.r, WinningText.color.g, WinningText.color.b, WinningText.color.a + (Time.deltaTime / 2.0f));
+        }
+
+        while(WinningText.color.a > 0.0f)
+        {
+            WinningText.color = new Color(WinningText.color.r, WinningText.color.g, WinningText.color.b, WinningText.color.a - (Time.deltaTime / 2.0f));
         }
     }
 }
